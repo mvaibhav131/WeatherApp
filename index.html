@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            background-image: url("https://wallpaperaccess.com/full/1540005.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+           background-attachment:fixed;
+
+        }
+       #container {
+         display:flex;
+       justify-content:center;
+       text-align: left;
+       }
+      
+       #form{
+           justify-content: center;
+           text-align: center;
+           margin-bottom: 20px;
+      }
+      iframe{
+          width:350px;
+          height:350px;
+          margin-right:80px;
+      }
+      
+       h3,h2{
+           color:rgb(200, 255, 0);
+       }
+       h1{
+           color:rgb(255, 5, 5);
+           font-size: 50px;
+       }
+       input{
+           width:400px;
+           height:30px;
+           text-align: center;
+           border-radius:25px;
+       }
+       button{
+        font-size:30px;
+        display:flex;
+        width:300px;
+        background:#21d4fd;
+        background-image:linear-gradient(19deg,#21d4fd 0%,#b721ff 100%);
+        justify-content:center;
+        color:white;
+        padding:1px;
+        margin:25px auto;
+        text-align:center;
+        border-radius:25px;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="form">
+        <h1>Find Your City Weather !</h1>
+        <input type="text" id="city" placeholder="Enter city name">
+        <button onclick="getweather()">Get Weather</button>
+    </div>
+   
+    <div id="container"></div>
+   
+    
+</body>
+</html>
+
+<script>
+
+    // url="https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=7aff78711cc547228595910787464b3c";
+    // (`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=7aff78711cc547228595910787464b3c`)
+//     let container=document.getElementById("container")
+   var container=document.getElementById("container");
+//    var image=document.getElementById("image");
+async function getweather(){
+       try{
+
+        let city =document.getElementById("city").value;
+        let res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c4bee1e90437fea3574fc20d672193ae&units=metric`)
+      
+        data= await res.json();
+        appenddata(data)
+        console.log(data)
+    }
+       catch(error){
+        console.log(error);
+        let res=document.createElement("h1");
+        res.innerText="Invalid city"
+        container.append(res);
+    }
+   }
+ 
+ function appenddata(data){
+
+container.innerHTML=null;
+var div1=document.createElement("div");
+var div2=document.createElement("div")
+
+let img=document.createElement("iframe");
+img.src=(`https://www.google.com/maps/embed/v1/place?q=${data.name}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`)
+
+
+let name=document.createElement("h2");
+name.innerText="City Name : "+data.name;
+
+let temp=document.createElement("h3");
+temp.innerText="Temperature : "+data.main.temp+" °C";
+
+let pressure=document.createElement("h3");
+pressure.innerText="Pressure : "+data.main.pressure+" Pa";
+
+let hum=document.createElement("h3");
+hum.innerText="Humidity : "+data.main.humidity+ " g/Kg";
+
+let sunrise=document.createElement("h3");
+sunrise.innerText="Sunrise : "+data.sys.sunrise ;
+
+let sunset=document.createElement("h3")
+sunset.innerText="Sunset : "+data.sys.sunset;
+
+let maxtemp=document.createElement("h3");
+maxtemp.innerText="Max Temp : "+data.main.temp_max+" °C";
+
+let mintemp=document.createElement("h3");
+mintemp.innerText="Min Temp : "+data.main.temp_min+ " °C";
+
+div1.append(img);
+div2.append(name,temp,pressure,hum,sunrise,sunset,maxtemp,mintemp);
+container.append(div1,div2);
+
+      }
+
+
+</script>
