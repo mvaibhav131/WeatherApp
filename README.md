@@ -8,8 +8,8 @@
 ## you need to the enter the name of City.
 ## press Enter.
 
-## then its showing the that all data on left side .
-##  It also shows the Map of city on right side of screen.
+## then its showing the that all data on right side .
+##  It also shows the Map of city on left side of screen.
 
 ## [Visit the Weather App ](https://weather-app-vaibhav.netlify.app/)
 
