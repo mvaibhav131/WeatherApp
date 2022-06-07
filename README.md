@@ -1,5 +1,5 @@
 # WeatherApp
-## Chech live weather for any city......
+## Check live weather for any city......
 
 
 ## These App is made up by using the Basic HTML ,CSS ,JAVASCRIPT.
