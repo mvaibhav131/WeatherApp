@@ -88,10 +88,10 @@ async function getweather(){
       
         data= await res.json();
         appenddata(data)
-        console.log(data)
+        // console.log(data)
     }
        catch(error){
-        console.log(error);
+        // console.log(error);
         let res=document.createElement("h1");
         res.innerText="Invalid city"
         container.append(res);
