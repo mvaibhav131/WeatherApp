@@ -75,14 +75,13 @@
    //var image=document.getElementById("image");
 async function getweather(){
        try{
-
         let city =document.getElementById("city").value;
         let res=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=c4bee1e90437fea3574fc20d672193ae&units=metric`)
       
         data= await res.json();
         appenddata(data)
         // console.log(data)
-    }
+     }
        catch(error){
         // console.log(error);
         let res=document.createElement("h1");
