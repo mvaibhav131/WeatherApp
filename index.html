@@ -88,14 +88,11 @@ async function getweather(){
         res.innerText="Invalid city"
         container.append(res);
     }
-   }
- 
- function appenddata(data){
-
+  }
+function appenddata(data){
 container.innerHTML=null;
 var div1=document.createElement("div");
 var div2=document.createElement("div")
-
 let img=document.createElement("iframe");
 img.src=(`https://www.google.com/maps/embed/v1/place?q=${data.name}&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8`)
 
