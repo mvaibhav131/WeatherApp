@@ -57,6 +57,7 @@
         border-radius:25px;
         cursor: pointer;
        }
+       /* Footer css */
     
     </style>
 </head>
@@ -67,7 +68,8 @@
         <button onclick="getweather()">Get Weather</button>
     </div>
        <div id="container"></div>
- </body>
+
+        </body>
 </html>
 
 <script>
@@ -89,8 +91,9 @@ async function getweather(){
        catch(error){
         // console.log(error);
         let res=document.createElement("h1");
-        res.innerText="Invalid city Name"
+        res.innerHTML='<img src="https://www.pngall.com/wp-content/uploads/8/Wrong-Logo.png" alt="" width="300" height="300">'
         container.append(res);
+        alert("Please Enter Valid City Name!!")
     }
   }
 function appenddata(data){
