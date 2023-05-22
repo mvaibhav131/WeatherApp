@@ -114,7 +114,7 @@ let hum=document.createElement("h3");
 hum.innerText="Humidity : "+data.main.humidity+ " g/Kg";
 
 let sunrise=document.createElement("h3");
-sunrise.innerText="Sunrise : "+data.sys.sunrise ;
+sunrise.innerText="Sunrise : "+new Date(data.sys.sunrise*1000) ;
 
 let sunset=document.createElement("h3")
 sunset.innerText="Sunset : "+data.sys.sunset;
