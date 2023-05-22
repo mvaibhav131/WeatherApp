@@ -30,17 +30,18 @@
       }
        h3,h2{
            color:rgb(4, 0, 255);
+           font-size: 16px;
        }
        h1{
            color:rgb(255, 5, 209);
-           font-size: 35px;
+           font-size: 29px;
        }
        input{
            width:400px;
            height:30px;
            text-align: center;
            border-radius:25px;
-           transform: scale(1.5);
+           transform: scale(1.2);
            font-weight: bold;
        }
        button{
@@ -58,23 +59,66 @@
         cursor: pointer;
        }
        /* Footer css */
-       /* *{
-    margin: 5px;
-    padding: 5px;
-    box-sizing: border-box;
-   } */
-   footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
-    height: auto;
-    width: 100vw;
-    padding-top: 40px;
-    color: #fff;
+       @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+
+.footer {
+  position:absolute;
+  left:0%;
+  bottom: 0%;
+  width: 100%;
+  /* background: #3586ff; */
+  /* min-height: 100px; */
+  /* padding: 20px 50px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-    
+
+.social-icon,
+.menu {
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px 0; */
+  /* flex-wrap: wrap; */
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+ 
+p{
+    margin-left: 40px;
+    color: blue;
+}
+ul{
+    margin: -11px;
+}
+
+.menu__link {
+  font-size: 1rem;
+  color: #000000;
+  justify-content: space-evenly;
+  margin: 5px;
+  /* margin-bottom: -10px; */
+  /* display: inline-block; */
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+ .menu__link:hover{
+    color: blue;
+ }
+
+
+
+
+
     </style>
 </head>
 <body>
@@ -84,8 +128,16 @@
         <button onclick="getweather()">Get Weather</button>
     </div>
        <div id="container"></div>
-       <footer>
-    </footer>
+       <footer class="footer">
+        <ul class="menu">
+          <li class="menu__item"><a class="menu__link" href="#">Linkdin |</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Twitter |</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Instagram |</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Portfolio |</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Email </a></li>
+        </ul>
+        <p>&copy;Created By Vaibhav More (Full Stack Developer)</p>
+      </footer>
         </body>
 </html>
 
