@@ -117,7 +117,7 @@ let sunrise=document.createElement("h3");
 sunrise.innerText="Sunrise : "+new Date(data.sys.sunrise*1000) ;
 
 let sunset=document.createElement("h3")
-sunset.innerText="Sunset : "+data.sys.sunset;
+sunset.innerText="Sunset : "+new Date(data.sys.sunset*1000);
 
 let maxtemp=document.createElement("h3");
 maxtemp.innerText="Max Temp : "+data.main.temp_max+" °C";
