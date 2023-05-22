@@ -24,8 +24,8 @@
            margin-bottom: 20px;
       }
       iframe{
-          width:350px;
-          height:350px;
+          width:270px;
+          height:270px;
           margin-right:80px;
       }
        h3,h2{
@@ -58,6 +58,22 @@
         cursor: pointer;
        }
        /* Footer css */
+       /* *{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+   } */
+   footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+}
     
     </style>
 </head>
@@ -68,7 +84,8 @@
         <button onclick="getweather()">Get Weather</button>
     </div>
        <div id="container"></div>
-
+       <footer>
+    </footer>
         </body>
 </html>
 
@@ -91,7 +108,7 @@ async function getweather(){
        catch(error){
         // console.log(error);
         let res=document.createElement("h1");
-        res.innerHTML='<img src="https://www.pngall.com/wp-content/uploads/8/Wrong-Logo.png" alt="" width="300" height="300">'
+        res.innerHTML='<img src="https://www.pngall.com/wp-content/uploads/8/Wrong-Logo.png" alt="" width="250" height="250">'
         container.append(res);
         alert("Please Enter Valid City Name!!")
     }
