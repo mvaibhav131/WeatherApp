@@ -25,13 +25,13 @@
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | React 18 + TypeScript |
-| Build tool | Vite 5 |
-| Charts | Recharts |
-| API | OpenWeatherMap (Current, Forecast, Geocoding) |
-| Styling | Pure CSS — Glassmorphism + CSS custom properties |
+| Layer      | Technology                                       |
+| ---------- | ------------------------------------------------ |
+| Framework  | React 18 + TypeScript                            |
+| Build tool | Vite 5                                           |
+| Charts     | Recharts                                         |
+| API        | OpenWeatherMap (Current, Forecast, Geocoding)    |
+| Styling    | Pure CSS — Glassmorphism + CSS custom properties |
 
 ---
 
@@ -57,6 +57,7 @@ npm run dev
 Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ### Build for production
+
 ```bash
 npm run build
 npm run preview
@@ -94,6 +95,4 @@ src/
 
 ---
 
-*Created by **Vaibhav More** — Full Stack Developer*
-
-
+_Created by **Vaibhav More** — Full Stack Developer_
